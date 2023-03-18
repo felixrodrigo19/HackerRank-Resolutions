@@ -38,6 +38,8 @@ The second line contains **_N_** space-separated integers that make up **_A_**.
 
 | 1   | 4   | 3   | 2   |
 |-----|-----|-----|-----|
+
+
 Array: arr
 ```
 4
