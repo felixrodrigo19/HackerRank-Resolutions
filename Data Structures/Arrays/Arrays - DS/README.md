@@ -50,5 +50,5 @@ Array: arr
 2 3 4 1
 ```
 
-## How I solve
+## How I solved
 I use the reversed Build-in function, This function takes an iterator as a parameter and return a reverse iterator.
