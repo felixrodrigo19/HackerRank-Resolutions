@@ -7,25 +7,25 @@ import re
 import sys
 
 
-def calculate_hourglass(arr, initial_line, initial_column):
+def calculate_hourglass(arr, line_index, column_index):
     row_begin = (
-            arr[initial_line][initial_column] +
-            arr[initial_line][initial_column + 1] +
-            arr[initial_line][initial_column + 2]
+            arr[line_index][column_index] +
+            arr[line_index][column_index + 1] +
+            arr[line_index][column_index + 2]
     )
-    row_center = arr[initial_line + 1][initial_column + 1]
+    row_center = arr[line_index + 1][column_index + 1]
     row_end = (
-            arr[initial_line + 2][initial_column] +
-            arr[initial_line + 2][initial_column + 1] +
-            arr[initial_line + 2][initial_column + 2]
+            arr[line_index + 2][column_index] +
+            arr[line_index + 2][column_index + 1] +
+            arr[line_index + 2][column_index + 2]
     )
     return row_begin + row_center + row_end
 
 
 def hourglassSum(arr):
-    values = [calculate_hourglass(arr, initial_line, initial_column)
-              for initial_line in range(0, 4)
-              for initial_column in range(0, 4)]
+    values = [calculate_hourglass(arr, line_index, column_index)
+              for line_index in range(0, 4)
+              for column_index in range(0, 4)]
     return max(values)
 
 
